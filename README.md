@@ -56,7 +56,14 @@ pip install -r requirements.txt
 
 # CNN model 
 
- 
+
+## Dataset and expected input
+
+- **Classes**: 53 (52 standard cards + 1 joker).
+- **Images**: expected to be pre-cropped to the card region and resized to `im_size` (e.g., `im_size = (120,120)`).
+- **Channels**: 1 (grayscale). Convert to grayscale when loading.
+
+
 ## Preprocessing & augmentation
 
 Recommended preprocessing steps:
@@ -73,12 +80,4 @@ Recommended preprocessing steps:
 - This is intentionally compact. If underfitting, consider more filters, larger dense layers, or additional conv blocks.
 
 ---
-
-## Dataset and expected input
-
-- **Classes**: 53 (52 standard cards + 1 joker).
--**Images**: expected to be pre-cropped to the card region and resized to `im_size` (e.g., `im_size = (120,120)`).
-- **Channels**: 1 (grayscale). Convert to grayscale when loading.
-
-
-
+ 
