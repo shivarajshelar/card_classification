@@ -1,12 +1,12 @@
 # Card Classification
 
-### first Example pic of Recommend photo
+### first Example pic of classification photo
 ![Movie Recommender Screenshot](image/demo1.png)
 
-### Second Example pic of Recommend photo
+### Second Example pic of classification photo
 ![Movie Recommender Screenshot](image/demo2.png)
 
-### Third Example pic of Recommend photo
+### Third Example pic of classification photo
 ![Movie Recommender Screenshot](image/demo3.png)
 
 
