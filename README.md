@@ -77,8 +77,7 @@ Recommended preprocessing steps:
 ## Dataset and expected input
 
 - **Classes**: 53 (52 standard cards + 1 joker).
-- **Label format**: integer class indices [0..52] or one-hot encoded vectors of length 53.
-- **Images**: expected to be pre-cropped to the card region and resized to `im_size` (e.g., `im_size = (128,128)`).
+-**Images**: expected to be pre-cropped to the card region and resized to `im_size` (e.g., `im_size = (120,120)`).
 - **Channels**: 1 (grayscale). Convert to grayscale when loading.
 
 
