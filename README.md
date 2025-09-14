@@ -41,7 +41,7 @@ pip install -r requirements.txt
 
 7. git branch -M main
 
-8. git push -u origin
+8. git push -u origin main
 
 ```
 ## Library are used for this project
@@ -54,10 +54,32 @@ pip install -r requirements.txt
 6. seaborn
 
 
-## CNN model 
+# CNN model 
 
-Using cnn model sequential model and batchnormalization , Dense , Activation CONV2d , 
+ 
+## Preprocessing & augmentation
 
-card have 52 card with 1 jocker total num claases is 53
+Recommended preprocessing steps:
+
+- **Resize** to the model input size (e.g., 120×120).
+- **Rescale** pixel values to `[0, 1]` (divide by 224.0).
+- **Convert to grayscale**: either at dataset load time or by specifying color_mode in the loader.
+
+
+**Notes on the architecture**:
+- Input is grayscale (`channels=1`). If your images are RGB, change `input_shape` to `(H, W, 3)`.
+- Two convolutional blocks with BatchNorm + ReLU + MaxPool are used to extract features.
+- A small dense head with BatchNorm and ReLU precedes the final softmax output.
+- This is intentionally compact. If underfitting, consider more filters, larger dense layers, or additional conv blocks.
+
+---
+
+## Dataset and expected input
+
+- **Classes**: 53 (52 standard cards + 1 joker).
+- **Label format**: integer class indices [0..52] or one-hot encoded vectors of length 53.
+- **Images**: expected to be pre-cropped to the card region and resized to `im_size` (e.g., `im_size = (128,128)`).
+- **Channels**: 1 (grayscale). Convert to grayscale when loading.
+
 
 
